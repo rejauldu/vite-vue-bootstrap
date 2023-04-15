@@ -17,4 +17,5 @@ npm install sass
 <li>Update the <code>vite.config.js</code></li>
 <li>Create <code>resources/sass/app.scss</code> and <code>resources/sass/_variables.scss</code></li>
 <li>Update <code>resources/js/app.js</code> and <code>resources/js/bootstrap.js</code></li>
+<li>Include assets in blade files</li>
 </ul>
