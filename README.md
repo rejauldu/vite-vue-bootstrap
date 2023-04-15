@@ -6,7 +6,7 @@ composer create-project laravel/laravel vite-vue-bootstrap
 <pre><blockquote>
 cd vite-vue-bootstrap
 </blockquote></pre>
-<p>Now, execute the following packages:</p>
+<p>Now, install the following packages:</p>
 <pre><blockquote>
 npm install bootstrap
 npm install vue
