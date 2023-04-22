@@ -1,3 +1,4 @@
+<h1>Step 1:</h1>
 <p>Install laravel</p>
 <pre><blockquote>
 composer create-project laravel/laravel vite-vue-bootstrap
@@ -19,3 +20,7 @@ npm install sass
 <li>Update <code>resources/js/app.js</code> and <code>resources/js/bootstrap.js</code></li>
 <li>Include assets in blade files</li>
 </ul>
+<p>Done!</p>
+<h2>Step: 2</h2>
+<pre><blockquote>
+npm install vue-router</pre></blockquote>
