@@ -22,5 +22,35 @@ npm install sass
 </ul>
 <p>Done!</p>
 <h2>Step: 2</h2>
+<p>Install <code>vue-router</code></p>
 <pre><blockquote>
 npm install vue-router</pre></blockquote>
+<h3>Sanctum</h3>
+<p>Now, execute the following commands:</p>
+<pre><blockquote>
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan migrate
+</blockquote></pre>
+<p>you should add Sanctum's middleware to your api middleware group within your application's <code>app/Http/Kernel.php</code> file:</p>
+<pre><blockquote>
+'api' => [
+    \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+    \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+],
+</blockquote></pre>
+<p>Set the supports_credentials option within your application's config/cors.php configuration file to true.</p>
+<p>Now, add in your <code>resources/js/bootstrap.js</code> file</p>
+<pre><blockquote>
+axios.defaults.withCredentials = true;
+</blockquote></pre>
+<p>Finally, you should add in your <code>.env</code> file</p>
+<pre><blockquote>
+SESSION_DOMAIN = spa
+SANCTUM_STATEFUL_DOMAINS = spa
+</blockquote></pre>
+<p><b>Note:</b></p>
+<ul>
+<li>Notice logout function is different for sanctum</li>
+<li>Notice middleware for sanctum</li>
+</ul>
